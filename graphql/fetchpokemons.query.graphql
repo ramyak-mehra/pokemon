@@ -1,0 +1,34 @@
+query fetch_pokemons($quantity: Int!){
+ {
+  pokemons(first:$quantity){
+    id
+    name
+		image
+    classification
+    types
+    weight{
+      maximum
+      minimum
+    }
+    height{
+      maximum
+      minimum
+    }
+    attacks{
+      fast{
+        name
+        type
+        damage
+      }
+      special{
+        name
+        type
+        damage
+      }
+    }
+    maxCP
+    maxHP
+    weaknesses
+  }
+}
+}

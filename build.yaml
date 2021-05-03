@@ -1,0 +1,13 @@
+targets:
+  $default:
+    sources:
+      - lib/**
+      - graphql/**
+      - pokemon.schema.graphql
+    builders:
+      artemis:
+        options:
+          schema_mapping:
+            - schema: pokemon.schema.graphql
+              queries_glob: graphql/fetchpokemons.query.graphql
+              output: lib/graphql/fetch_pokemons_query.dart
